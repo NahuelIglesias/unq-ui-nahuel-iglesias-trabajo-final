@@ -1,0 +1,21 @@
+.intro {
+    background-color: rgb(13, 53, 105);
+    color: whitesmoke;
+    padding: 2px;
+}
+
+.intro--header {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+}
+
+.intro--description {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+}
+
+
+.movements {
+    padding: 10px;
+    color: rgb(21, 21, 87);
+}
