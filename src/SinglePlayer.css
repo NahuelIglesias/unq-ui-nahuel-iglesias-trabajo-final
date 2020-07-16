@@ -1,3 +1,6 @@
+/*
+    --- Header design ---
+*/
 .intro {
     background-color: rgb(13, 53, 105);
     color: whitesmoke;
@@ -6,16 +9,65 @@
 
 .intro--header {
     font-family: Impact, Charcoal, sans-serif;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .intro--description {
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 20px;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 30px;
 }
 
 
+/*
+    --- Icons design ---
+*/
 .movements {
-    padding: 10px;
-    color: rgb(21, 21, 87);
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    justify-content: center;
+    padding: 75px;
+    padding-top: 10px;
+    column-gap: 50px;
+}
+
+.icon {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    transition: all .2s
+}
+
+.icon:hover{
+    transform: scale(1.3)
+}
+
+
+/*
+    --- Results design ---
+*/
+.result {
+    padding: 5px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 25px;
+}
+
+.result--tie {
+    color: darkgoldenrod;
+}
+
+.result--win {
+    color: darkgreen;
+}
+
+.result--lose {
+    color: darkred;
+}
+
+
+/*
+    --- Content desing (everything that doesn't fall in the other categories) ---
+*/
+.generalContent {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 18px;
 }
