@@ -1,14 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './SinglePlayer.css'
 
 const SinglePlayer = () => {
     const [player1, setPlayer1] = useState(undefined)
     const [player2, setPlayer2] = useState(undefined)
-
-    useEffect (() => {
-        setPlayer2(getRndInteger(0, 4))
-        //setPlayer2(0) //para pruebas
-    }, []);
 
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
@@ -20,7 +15,7 @@ const SinglePlayer = () => {
         } else if (player1 === player2) {
             return (
                 <div className="result result--tie">
-                    <p>You've tied, huh? Well isn't that boring. Just try again</p>
+                    <p>You've tied, huh? Well isn't that boring</p>
                 </div>
             )
         } else if (player1Wins()) {
@@ -58,7 +53,7 @@ const SinglePlayer = () => {
         } else {
             return (
                 <div className="generalContent">
-                    <p>You have chosen {numberToMovement(player1)}, and Totally not Skynet has chosen {numberToMovement(player2)}</p>
+                    <p>You have chosen {numberToMovement(player1)}, and totally not Skynet has chosen {numberToMovement(player2)}</p>
                 </div>
             )
         }
@@ -78,30 +73,10 @@ const SinglePlayer = () => {
         }
     }
 
-    function handleChoice0() {
-        setPlayer1(0)
+    const handleChoice = event => {
+        let move = parseInt(event.target.name)
+        setPlayer1(move)
         setPlayer2(getRndInteger(0, 4))
-        //setPlayer2(0) //para pruebas
-    }
-    function handleChoice1() {
-        setPlayer1(1)
-        setPlayer2(getRndInteger(0, 4))
-        //setPlayer2(0) //para pruebas
-    }
-    function handleChoice2() {
-        setPlayer1(2)
-        setPlayer2(getRndInteger(0, 4))
-        //setPlayer2(0) //para pruebas
-    }
-    function handleChoice3() {
-        setPlayer1(3)
-        setPlayer2(getRndInteger(0, 4))
-        //setPlayer2(0) //para pruebas
-    }
-    function handleChoice4() {
-        setPlayer1(4)
-        setPlayer2(getRndInteger(0, 4))
-        //setPlayer2(0) //para pruebas
     }
 
     return (
@@ -120,11 +95,11 @@ const SinglePlayer = () => {
                 </p>
             </div>
             <div className="movements">
-                <img src={process.env.PUBLIC_URL + '/roca.png'} className="icon" alt="Rock" name="2" onClick={handleChoice2}/>
-                <img src={process.env.PUBLIC_URL + '/papel.png'} className="icon" alt="Paper" name="1" onClick={handleChoice1}/>
-                <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="icon" alt="Scissors" name="0" onClick={handleChoice0}/>
-                <img src={process.env.PUBLIC_URL + '/lagartija.png'} className="icon" alt="Lizard" name="3" onClick={handleChoice3}/>
-                <img src={process.env.PUBLIC_URL + '/spock.png'} className="icon" alt="Spock" name="4" onClick={handleChoice4}/>
+                <img src={process.env.PUBLIC_URL + '/roca.png'} className="icon" alt="Rock" name="2" onClick={handleChoice}/>
+                <img src={process.env.PUBLIC_URL + '/papel.png'} className="icon" alt="Paper" name="1" onClick={handleChoice}/>
+                <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="icon" alt="Scissors" name="0" onClick={handleChoice}/>
+                <img src={process.env.PUBLIC_URL + '/lagartija.png'} className="icon" alt="Lizard" name="3" onClick={handleChoice}/>
+                <img src={process.env.PUBLIC_URL + '/spock.png'} className="icon" alt="Spock" name="4" onClick={handleChoice}/>
             </div>
             {playersChoices()}
             {evaluateWinner()}
@@ -133,17 +108,3 @@ const SinglePlayer = () => {
 }
 
 export default SinglePlayer;
-
-/*<button className="option" onClick={setPlayer1(2)}>Rock</button>
-<button className="option" onClick={setPlayer1(1)}>Paper</button>
-<button className="option" onClick={setPlayer1(0)}>Scissors</button>
-<button className="option" onClick={setPlayer1(3)}>Lizard</button>
-<button className="option" onClick={setPlayer1(4)}>Spock</button>*/
-
-/*
-<img src={process.env.PUBLIC_URL + '/roca.png'} className="icon" alt="Rock" onClick={setPlayer1(2)}/>
-<img src={process.env.PUBLIC_URL + '/papel.png'} className="icon" alt="Paper" onClick={setPlayer1(1)}/>
-<img src={process.env.PUBLIC_URL + '/tijeras.png'} className="icon" alt="Scissors" onClick={setPlayer1(0)}/>
-<img src={process.env.PUBLIC_URL + '/lagartija.png'} className="icon" alt="Lizard" onClick={setPlayer1(3)}/>
-<img src={process.env.PUBLIC_URL + '/spock.png'} className="icon" alt="Spock" onClick={setPlayer1(4)}/>
-*/
