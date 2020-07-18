@@ -4,18 +4,20 @@
 .intro {
     background-color: rgb(13, 53, 105);
     color: whitesmoke;
-    padding: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: 'Vampiro One', cursive;
+    /*font-family: Impact, Charcoal, sans-serif;*/
 }
 
 .intro--header {
-    font-family: Impact, Charcoal, sans-serif;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .intro--description {
-    font-family: Impact, Charcoal, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
 }
+
 
 
 /*
@@ -23,15 +25,16 @@
 */
 .movements {
     display: grid;
-    grid-template-columns: repeat(5, min-content);
+    grid-template-columns: repeat(auto-fit, 120px);
     justify-content: center;
-    padding: 75px;
-    padding-top: 10px;
-    column-gap: 50px;
+    padding: 15px;
+    column-gap: 25px;
+    row-gap: 15px;
 }
 
 .icon {
     cursor: pointer;
+    justify-content: center;
     width: 80px;
     height: 80px;
     transition: all .2s
@@ -42,13 +45,14 @@
 }
 
 
+
 /*
     --- Results design ---
 */
 .result {
-    padding: 5px;
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 25px;
+    padding: 0px;
+    /*font-family: "Lucida Console", Monaco, monospace;*/
+    font-size: 35px;
 }
 
 .result--tie {
@@ -64,10 +68,29 @@
 }
 
 
+
+/*
+    --- Points counters ---
+*/
+/*.points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 120px);
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    /*padding-top: 20px;
+    column-gap: 900px;
+    row-gap: 15px;
+    font-size: 18px;
+}*/
+
+
+
 /*
     --- Content desing (everything that doesn't fall in the other categories) ---
 */
 .generalContent {
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 18px;
+    /*font-family: "Lucida Console", Monaco, monospace;*/
+    font-size: 25px;
 }
