@@ -13,22 +13,22 @@ const SinglePlayer = () => {
 
     function evaluateWinner() {
         if (player1 === undefined) {
-            return (<div className="result"/>)
+            return (<div className="single--result"/>)
         } else if (player1 === player2) {
             return (
-                <div className="result result--tie">
+                <div className="single--result single--result--tie">
                     <p>You've tied, huh? Well isn't that boring</p>
                 </div>
             )
         } else if (player1Wins()) {
             return (
-                <div className="result result--win">
+                <div className="single--result single--result--win">
                     <p>You've won! Finally!</p>
                 </div>
             )
         } else {
             return (
-                <div className="result result--lose">
+                <div className="single--result single--result--lose">
                     <p>You've lost... Well, are you just gonna give up?</p>
                     <p>Do not show weakness, or the machines will get us</p>
                 </div>
@@ -49,12 +49,12 @@ const SinglePlayer = () => {
     function playersChoices() {
         if (player1 === undefined) {
             return(
-                <div className="generalContent">
+                <div className="single--generalContent">
                     <p>You haven't chosen a move yet...</p>
                 </div>)
         } else {
             return (
-                <div className="generalContent">
+                <div className="single--generalContent">
                     <p>You have chosen {numberToMovement(player1)}, and totally not Skynet has chosen {numberToMovement(player2)}</p>
                 </div>
             )
@@ -94,21 +94,21 @@ const SinglePlayer = () => {
 
     return (
         <>
-            <div className="intro">
-                <p className="intro intro--header">
+            <div className="single--intro">
+                <p className="single--intro single--intro--header">
                     Rock Paper Scissors Lizard Spock™
                 </p>
-                <p className="intro intro--description">
+                <p className="single--intro single--intro--description">
                     Because three options weren't enough, were they?
                 </p>
             </div>
 
-            <div className="generalContent">
+            <div className="single--generalContent">
                 <p>
                     Choose your move
                 </p>
             </div>
-            <div className="movements">
+            <div className="single--movements">
                 <img src={process.env.PUBLIC_URL + '/roca.png'} className="icon" alt="Rock" name="2" onClick={handleChoice}/>
                 <img src={process.env.PUBLIC_URL + '/papel.png'} className="icon" alt="Paper" name="1" onClick={handleChoice}/>
                 <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="icon" alt="Scissors" name="0" onClick={handleChoice}/>
@@ -125,11 +125,11 @@ export default SinglePlayer;
 
 /*
 <div className="points">
-<div className="points points--counter">
+<span className="points points--counter">
     Your points: {pointCounter1}
-</div>
-<div className="points points--counter">
+</span>
+<span className="points points--counter">
     NotSkynet's points: {pointCounter2}
-</div>
+</span>
 </div>
 */
