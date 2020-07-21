@@ -1,7 +1,7 @@
 /*
     --- Header design ---
 */
-.intro {
+.multiIntro {
     background-color: rgb(105, 13, 13);
     color: whitesmoke;
     padding-top: 1px;
@@ -10,11 +10,11 @@
     /*font-family: Impact, Charcoal, sans-serif;*/
 }
 
-.intro--header {
+.multiIntro--header {
     font-size: 45px;
 }
 
-.intro--description {
+.multiIntro--description {
     font-size: 25px;
 }
 
@@ -23,7 +23,7 @@
 /*
     --- Icons design ---
 */
-.movements {
+.multiMovements {
     display: grid;
     grid-template-columns: repeat(auto-fit, 120px);
     justify-content: center;
@@ -32,7 +32,7 @@
     row-gap: 15px;
 }
 
-.icon {
+.multiIcon {
     cursor: pointer;
     justify-content: center;
     width: 80px;
@@ -40,7 +40,7 @@
     transition: all .2s
 }
 
-.icon:hover{
+.multiIcon:hover{
     transform: scale(1.3)
 }
 
@@ -49,7 +49,7 @@
 /*
     --- Reset button ---
 */
-.resetButton {
+.multiResetButton {
     background-color: rgb(0, 140, 255);
     font-family: 'Ranga', cursive;
     color: white;
@@ -62,7 +62,7 @@
     display: inline-block;
 }
 
-.resetButton:hover {
+.multiResetButton:hover {
     background-color: rgb(82, 177, 255);
     cursor: pointer;
 }
@@ -72,17 +72,17 @@
 /*
     --- Results design ---
 */
-.result {
+.multiResult {
     padding: 0px;
     /*font-family: "Lucida Console", Monaco, monospace;*/
     font-size: 45px;
 }
 
-.result--tie {
+.multiResult--tie {
     color: darkgoldenrod;
 }
 
-.result--win {
+.multiResult--win {
     color: darkmagenta;
 }
 
@@ -91,12 +91,11 @@
 /*
     --- Content desing (everything that doesn't fall in the other categories) ---
 */
-.generalContent {
+.multiGeneralContent {
     /*font-family: "Lucida Console", Monaco, monospace;*/
     font-size: 25px;
 }
 
-.generalContentEnding {
-    font-size: 25px;
+.multiGeneralContent--ending {
     padding-top: 15px;
 }

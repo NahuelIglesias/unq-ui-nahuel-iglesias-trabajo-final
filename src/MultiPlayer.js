@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
+
 import './MultiPlayer.css'
 
 const MultiPlayer = () => {
@@ -7,22 +9,22 @@ const MultiPlayer = () => {
 
     function evaluateWinner() {
         if (player1 === undefined) {
-            return (<div className="result"/>)
+            return (<div className="multiResult"/>)
         } else if (player1 === player2) {
             return (
-                <div className="result result--tie">
+                <div className="multiResult multiResult--tie">
                     <p>You two have tied, huh? Well isn't that boring</p>
                 </div>
             )
         } else if (player1Wins()) {
             return (
-                <div className="result result--win">
+                <div className="multiResult multiResult--win">
                     <p>Congrats Player 1, you've won! Finally!</p>
                 </div>
             )
         } else {
             return (
-                <div className="result result--win">
+                <div className="multiResult multiResult--win">
                     <p>Congrats Player 2, you've won! Finally!</p>
                 </div>
             )
@@ -55,7 +57,7 @@ const MultiPlayer = () => {
 
     function playersChoices() {
         return (
-            <div className="generalContent">
+            <div className="multiGeneralContent">
                 <p>Player 1 chose {numberToMovement(player1)} and Player 2 chose {numberToMovement(player2)}, so...</p>
             </div>
         )
@@ -80,7 +82,7 @@ const MultiPlayer = () => {
         if (player1 === undefined) {
             return (
                 <>
-                    <div className="generalContent">
+                    <div className="multiGeneralContent">
                         <p>
                             Player 1, choose your move
                         </p>
@@ -88,19 +90,19 @@ const MultiPlayer = () => {
                             Player 2, no peeking. I know where you live
                         </p>
                     </div>
-                    <div className="movements">
-                        <img src={process.env.PUBLIC_URL + '/roca.png'} className="icon" alt="Rock" name="2" onClick={handleChoiceP1}/>
-                        <img src={process.env.PUBLIC_URL + '/papel.png'} className="icon" alt="Paper" name="1" onClick={handleChoiceP1}/>
-                        <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="icon" alt="Scissors" name="0" onClick={handleChoiceP1}/>
-                        <img src={process.env.PUBLIC_URL + '/lagartija.png'} className="icon" alt="Lizard" name="3" onClick={handleChoiceP1}/>
-                        <img src={process.env.PUBLIC_URL + '/spock.png'} className="icon" alt="Spock" name="4" onClick={handleChoiceP1}/>
+                    <div className="multiMovements">
+                        <img src={process.env.PUBLIC_URL + '/roca.png'} className="multiIcon" alt="Rock" name="2" onClick={handleChoiceP1}/>
+                        <img src={process.env.PUBLIC_URL + '/papel.png'} className="multiIcon" alt="Paper" name="1" onClick={handleChoiceP1}/>
+                        <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="multiIcon" alt="Scissors" name="0" onClick={handleChoiceP1}/>
+                        <img src={process.env.PUBLIC_URL + '/lagartija.png'} className="multiIcon" alt="Lizard" name="3" onClick={handleChoiceP1}/>
+                        <img src={process.env.PUBLIC_URL + '/spock.png'} className="multiIcon" alt="Spock" name="4" onClick={handleChoiceP1}/>
                     </div>
                 </>
             )
         } else if (player2 === undefined) {
             return (
                 <>
-                    <div className="generalContent">
+                    <div className="multiGeneralContent">
                         <p>
                             Time to choose your move, Player 2
                         </p>
@@ -108,26 +110,26 @@ const MultiPlayer = () => {
                             Player 1, no peeking. I know where you live too
                         </p>
                     </div>
-                    <div className="movements">
-                        <img src={process.env.PUBLIC_URL + '/roca.png'} className="icon" alt="Rock" name="2" onClick={handleChoiceP2}/>
-                        <img src={process.env.PUBLIC_URL + '/papel.png'} className="icon" alt="Paper" name="1" onClick={handleChoiceP2}/>
-                        <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="icon" alt="Scissors" name="0" onClick={handleChoiceP2}/>
-                        <img src={process.env.PUBLIC_URL + '/lagartija.png'} className="icon" alt="Lizard" name="3" onClick={handleChoiceP2}/>
-                        <img src={process.env.PUBLIC_URL + '/spock.png'} className="icon" alt="Spock" name="4" onClick={handleChoiceP2}/>
+                    <div className="multiMovements">
+                        <img src={process.env.PUBLIC_URL + '/roca.png'} className="multiIcon" alt="Rock" name="2" onClick={handleChoiceP2}/>
+                        <img src={process.env.PUBLIC_URL + '/papel.png'} className="multiIcon" alt="Paper" name="1" onClick={handleChoiceP2}/>
+                        <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="multiIcon" alt="Scissors" name="0" onClick={handleChoiceP2}/>
+                        <img src={process.env.PUBLIC_URL + '/lagartija.png'} className="multiIcon" alt="Lizard" name="3" onClick={handleChoiceP2}/>
+                        <img src={process.env.PUBLIC_URL + '/spock.png'} className="multiIcon" alt="Spock" name="4" onClick={handleChoiceP2}/>
                     </div>
                 </>
             )
         } else {
             return (
                 <>
-                    <div className="generalContentEnding">
+                    <div className="multiGeneralContent multiGeneralContent--ending">
                         Ok, please do not punch each other now
                     </div>
                     {playersChoices()}
                     {evaluateWinner()}
-                    <div className="generalContent">
+                    <div className="multiGeneralContent">
                         <p> Wanna try again? </p>
-                        <button className="resetButton" type="reset" onClick={resetTurns}>The "F*ck go back" button</button>
+                        <button className="multiResetButton" type="reset" onClick={resetTurns}>The "F*ck go back" button</button>
                     </div>
                 </>
             )
@@ -136,11 +138,11 @@ const MultiPlayer = () => {
 
     return (
         <>
-            <div className="intro">
-                <p className="intro intro--header">
+            <div className="multiIntro">
+                <p className="multiIntro multiIntro--header">
                     Rock Paper Scissors Lizard Spock™
                 </p>
-                <p className="intro intro--description">
+                <p className="multiIntro multiIntro--description">
                     Because three options weren't enough, were they?
                 </p>
             </div>

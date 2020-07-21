@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
+
 import './SinglePlayer.css'
 
 const SinglePlayer = () => {
@@ -13,22 +15,22 @@ const SinglePlayer = () => {
 
     function evaluateWinner() {
         if (player1 === undefined) {
-            return (<div className="single--result"/>)
+            return (<div className="singleResult"/>)
         } else if (player1 === player2) {
             return (
-                <div className="single--result single--result--tie">
+                <div className="singleResult singleResult--tie">
                     <p>You've tied, huh? Well isn't that boring</p>
                 </div>
             )
         } else if (player1Wins()) {
             return (
-                <div className="single--result single--result--win">
+                <div className="singleResult singleResult--win">
                     <p>You've won! Finally!</p>
                 </div>
             )
         } else {
             return (
-                <div className="single--result single--result--lose">
+                <div className="singleResult singleResult--lose">
                     <p>You've lost... Well, are you just gonna give up?</p>
                     <p>Do not show weakness, or the machines will get us</p>
                 </div>
@@ -49,12 +51,12 @@ const SinglePlayer = () => {
     function playersChoices() {
         if (player1 === undefined) {
             return(
-                <div className="single--generalContent">
+                <div className="singleGeneralContent">
                     <p>You haven't chosen a move yet...</p>
                 </div>)
         } else {
             return (
-                <div className="single--generalContent">
+                <div className="singleGeneralContent">
                     <p>You have chosen {numberToMovement(player1)}, and totally not Skynet has chosen {numberToMovement(player2)}</p>
                 </div>
             )
@@ -94,26 +96,26 @@ const SinglePlayer = () => {
 
     return (
         <>
-            <div className="single--intro">
-                <p className="single--intro single--intro--header">
+            <div className="singleIntro">
+                <p className="singleIntro singleIntro--header">
                     Rock Paper Scissors Lizard Spock™
                 </p>
-                <p className="single--intro single--intro--description">
+                <p className="singleIntro singleIntro--description">
                     Because three options weren't enough, were they?
                 </p>
             </div>
 
-            <div className="single--generalContent">
+            <div className="singleGeneralContent">
                 <p>
                     Choose your move
                 </p>
             </div>
-            <div className="single--movements">
-                <img src={process.env.PUBLIC_URL + '/roca.png'} className="icon" alt="Rock" name="2" onClick={handleChoice}/>
-                <img src={process.env.PUBLIC_URL + '/papel.png'} className="icon" alt="Paper" name="1" onClick={handleChoice}/>
-                <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="icon" alt="Scissors" name="0" onClick={handleChoice}/>
-                <img src={process.env.PUBLIC_URL + '/lagartija.png'} className="icon" alt="Lizard" name="3" onClick={handleChoice}/>
-                <img src={process.env.PUBLIC_URL + '/spock.png'} className="icon" alt="Spock" name="4" onClick={handleChoice}/>
+            <div className="singleMovements">
+                <img src={process.env.PUBLIC_URL + '/roca.png'} className="singleIcon" alt="Rock" name="2" onClick={handleChoice}/>
+                <img src={process.env.PUBLIC_URL + '/papel.png'} className="singleIcon" alt="Paper" name="1" onClick={handleChoice}/>
+                <img src={process.env.PUBLIC_URL + '/tijeras.png'} className="singleIcon" alt="Scissors" name="0" onClick={handleChoice}/>
+                <img src={process.env.PUBLIC_URL + '/lagartija.png'} className="singleIcon" alt="Lizard" name="3" onClick={handleChoice}/>
+                <img src={process.env.PUBLIC_URL + '/spock.png'} className="singleIcon" alt="Spock" name="4" onClick={handleChoice}/>
             </div>
             {playersChoices()}
             {evaluateWinner()}
