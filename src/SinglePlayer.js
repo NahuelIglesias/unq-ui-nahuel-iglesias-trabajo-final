@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-
+import Navbar from './Navbar'
 import './SinglePlayer.css'
 
 const SinglePlayer = () => {
@@ -96,6 +95,7 @@ const SinglePlayer = () => {
 
     return (
         <>
+            <Navbar />
             <div className="singleIntro">
                 <p className="singleIntro singleIntro--header">
                     Rock Paper Scissors Lizard Spock™

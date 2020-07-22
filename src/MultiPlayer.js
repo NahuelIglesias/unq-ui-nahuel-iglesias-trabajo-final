@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-
+import Navbar from './Navbar'
 import './MultiPlayer.css'
 
 const MultiPlayer = () => {
@@ -138,6 +137,7 @@ const MultiPlayer = () => {
 
     return (
         <>
+            <Navbar />
             <div className="multiIntro">
                 <p className="multiIntro multiIntro--header">
                     Rock Paper Scissors Lizard Spock™

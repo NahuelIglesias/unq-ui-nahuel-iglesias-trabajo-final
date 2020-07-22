@@ -5,7 +5,6 @@ import * as serviceWorker from './serviceWorker';
 
 //APP
 import App from './App.js'
-import './App.css'
 import { BrowserRouter } from 'react-router-dom';
 
 /*ReactDOM.render(

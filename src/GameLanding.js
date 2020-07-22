@@ -23,7 +23,7 @@ export default function GameLanding() {
                 </p>
                 <p className="gameLandingGeneralContent">
                     <span>
-                        Or do you feel like punching a friend in the nose? Then try this one!
+                        Or do you feel like punching a friend in the throat? Then try this one!
                     </span>
                     <Link to="/multiplayer" className="gameModeButton gameModeButton--multi">MultiPlayer Mode</Link>
                 </p>
