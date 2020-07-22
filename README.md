@@ -1,68 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rock Paper Scissors Lizard Spock
 
-## Available Scripts
+## Información del proyecto
+Este proyecto es una variación del Piedra Papel o Tijera, agregando dos movimientos más (Lagarto y Spock).
+Esta versión del juego nos permite dos modos de juego:
 
-In the project directory, you can run:
+ - *SinglePlayer:* el usuario juega contra la aplicación. Por cada movimiento que el usuario elija para jugar, la aplicación intentará defenderse.
+ - *MultiPlayer:* permite que dos usuarios jueguen entre ellos de forma local. Primero uno de ellos elije su movimiento, luego el otro usuario elige otro movimiento, y al final se determina el resultado de la partida
 
-### `npm start`
+## Pre-requisitos para utilizar el proyecto
+ - Tener instalada la última versión de [NodeJs](https://nodejs.org/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instalación del proyecto
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ 1. Descargar el release **unq-ui-nahuel-iglesias-trabajo-final** o clonar el repositorio [unq-ui-nahuel-iglesias-trabajo-final](https://github.com/NahuelIglesias/unq-ui-nahuel-iglesias-trabajo-final)
+ 2. Abrir una terminal de comandos y, usando el comando `cd`, posicionarse en la carpeta del repositorio correspondiente al proyecto.
+ 3. Una vez posicionado, utilizar el comando `npm install` para instalar la configuración **Node Package Manager** al proyecto.
+ 4. Luego de haber instalado la configuración npm al proyecto, utilizar el comando `npm start` para ejecutar el proyecto.
+ 5. Una vez ejecutado el proyecto, se abrirá una ventana en el navegador default con la aplicación en modo de desarrollo. Si no se abrió la ventana, copiar http://localhost:3000/ para acceder a la aplicación en modo de desarrollo.
