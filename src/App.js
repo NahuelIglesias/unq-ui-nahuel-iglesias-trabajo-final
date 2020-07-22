@@ -4,13 +4,8 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import GameLanding from './GameLanding.js'
 import SinglePlayer from './SinglePlayer.js'
 import MultiPlayer from './MultiPlayer.js'
+import NotFoundPage from './NotFoundPage.js'
 import './App.css';
-
-/*function App() {
-  return (
-    <div className="App">
-      <SinglePlayer />
-    </div*/
 
 export default class App extends React.Component{
     render(){
@@ -22,12 +17,10 @@ export default class App extends React.Component{
                       <Route exact path= '/singleplayer' component={SinglePlayer}/>
                       <Route exact path= '/multiplayer' component={MultiPlayer}/>
                       
-                      
+                      <Route path='*'  component={NotFoundPage}/>
                   </Switch>
               </Router>
             </div>
           );
       }
 }
-
-//export default App;

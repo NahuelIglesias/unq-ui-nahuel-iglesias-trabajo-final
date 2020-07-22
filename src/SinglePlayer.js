@@ -5,8 +5,6 @@ import './SinglePlayer.css'
 const SinglePlayer = () => {
     const [player1, setPlayer1] = useState(undefined)
     const [player2, setPlayer2] = useState(undefined)
-    //const [pointCounter1, setPointCounter1] = useState(0)
-    //const [pointCounter2, setPointCounter2] = useState(0)
 
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
@@ -80,18 +78,7 @@ const SinglePlayer = () => {
         let move = parseInt(event.target.name)
         setPlayer1(move)
         setPlayer2(getRndInteger(0, 4))
-        //handlePoints()
     }
-
-    /*function handlePoints() {
-        if (player1 === player2) {
-
-        } else if (player1Wins()) {
-            setPointCounter1(pointCounter1+1)
-        } else {
-            setPointCounter2(pointCounter2+1)
-        }
-    }*/
 
     return (
         <>
@@ -124,14 +111,3 @@ const SinglePlayer = () => {
 }
 
 export default SinglePlayer;
-
-/*
-<div className="points">
-<span className="points points--counter">
-    Your points: {pointCounter1}
-</span>
-<span className="points points--counter">
-    NotSkynet's points: {pointCounter2}
-</span>
-</div>
-*/
